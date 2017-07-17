@@ -1,0 +1,5 @@
+<launch>
+	
+	<node name="nautonomous_navigation_planner_global" pkg="nautonomous_navigation_planner_global" type="global_guide_systems_planner_node.py"  output="screen" />
+
+</launch>
