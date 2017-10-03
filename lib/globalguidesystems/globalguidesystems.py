@@ -45,8 +45,8 @@ class API:
         for data_item in track_json[::-1]:
             lat = data_item['lat']
             lon = data_item['lon']
-
-            if(lat > 55): # filter out weird coordinates
+	    #print "Track request " + str(lat) + " "+ str(lon)
+            if(lat > 55 or lat < 50): # filter out weird coordinates
                 continue
 
             easting, northing = utm_helper.convert_GPS_coordinate_to_UTM_position(lat, lon)

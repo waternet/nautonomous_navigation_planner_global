@@ -28,7 +28,7 @@ class GlobalGuideSystemsPlanner:
 
     def path_regression(self):
         api = API()
-        boats = api.all_objects_history_request(10)
+        boats = api.all_objects_history_request(30)
 
         #find closest vaarkaart edge
         edge_clusters = self.find_closest_vaarkaart_edge(boats)
@@ -170,7 +170,7 @@ class GlobalGuideSystemsPlanner:
         # Creates the nodes from the waternet graph
         for vertex in self.vaarkaart_graph.vertices():
             visualization_graph.add_node(str(vertex), pos = (vertex.x(), vertex.y()))
-raph_green, 'pos')
+#, graph_green, 'pos')
         nx.draw_networkx_nodes(visualization_graph_green, pos = pos_green, node_color = 'g', node_size = 15)
         
         # Creates the edges from the waternet graph
